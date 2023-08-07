@@ -14,7 +14,7 @@ def total_distance(points, order):
 
 def tsp_bruteforce(points):
     best_order = None
-    best_distance = float('int')
+    best_distance = float('inf') # The value float('inf') represents positive infinity in Python
     for order in itertools.permutations(range(len(points))):
         distance = total_distance(points, order)
         if distance < best_distance:
